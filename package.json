@@ -1,27 +1,27 @@
 {
   "name": "myapp",
   "version": "0.0.1",
-  "description": "A sample Node.js app using Express 4",
-  "engines": {
-    "node": "6.10.2"
-  },
+  "description": "Node.js sample app for OpenShift Origin",
   "main": "main.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
   "scripts": {
     "start": "node main.js"
   },
-  "dependencies": {
-    "ejs": "2.5.6",
-    "express": "4.15.2"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/guadalupe-gomez/myapp"
+    "url": "https://github.com/guadalupe-gomez/myapp.git"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT"
+  "author": "Guadalupe Gomez <guada.sgomez@gmail.com>",
+  "license": "GuadalupeGomez",
+  "bugs": {
+    "url": "https://github.com/guadalupe-gomez/myapp/issues"
+  },
+  "homepage": "https://github.com/guadalupe-gomez/myapp"
 }
 
