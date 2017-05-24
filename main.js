@@ -1,18 +1,18 @@
 var http = require("http");
+var url = require("url");
 
-http.createServer(function (request, response) {
-   // Send the HTTP header 
-   // HTTP Status: 200 : OK
-   // Content Type: text/plain
-   response.writeHead(200, {'Content-Type': 'text/html'});
-   
-   // Send the response body as "Hello World"
-   response.end('Hello World Modificado 24/5\n');
-}).listen(8080);
+function iniciar() {
+  function onRequest(request, response) {
+    var pathname = url.parse(request.url).pathname;
+    console.log("Petición para " + pathname + " recibida.");
+    response.writeHead(200, {"Content-Type": "text/html"});
+    response.write("Peticion para " + pathname );
+    response.end();
+  }
 
-// Console will print the message
-//console.log('Server running at http://127.0.0.1:8080/');
-console.log("MyAPP-24/05/2017")
+  http.createServer(onRequest).listen(8080);
+  console.log("Servidor Iniciado.");
+}
 
-
+exports.iniciar = iniciar;
 
